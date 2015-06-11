@@ -1,0 +1,14 @@
+package com.zywu.finaldata;
+
+class overridetest {
+
+	private void f() {
+		
+	}
+	
+	private final void  g() {
+		
+	}
+}
+
+

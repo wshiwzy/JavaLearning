@@ -1,0 +1,14 @@
+2015-06-08 16:49:56,956 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
+2015-06-08 16:49:57,131 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:23656
+2015-06-10 12:57:31,694 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/help,null}
+2015-06-10 12:57:31,802 [Stop Help Server] WARN  o.e.j.util.thread.QueuedThreadPool - 1 threads could not be stopped
+2015-06-10 12:57:31,815 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool - Couldn't stop Thread[qtp2091188178-927 Acceptor0 SelectChannelConnector@127.0.0.1:23656,5,main]
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+2015-06-10 12:57:31,816 [Stop Help Server] INFO  o.e.j.util.thread.QueuedThreadPool -  at java.lang.Thread.run(Thread.java:745)
+2015-06-11 11:03:02,884 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
+2015-06-11 11:03:02,992 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@127.0.0.1:52136

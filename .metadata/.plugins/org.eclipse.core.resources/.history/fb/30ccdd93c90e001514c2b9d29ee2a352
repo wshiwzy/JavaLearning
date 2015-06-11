@@ -1,0 +1,5 @@
+package com.firstspringapp.bean;
+
+public class Ttt {
+ private int a;
+}

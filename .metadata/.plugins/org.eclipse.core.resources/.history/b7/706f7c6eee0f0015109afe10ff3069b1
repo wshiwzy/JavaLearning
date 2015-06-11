@@ -1,0 +1,31 @@
+package com.firstspringapp.bean;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.firstspringapp.dao.TestDao;
+import com.firstspringapp.dao.TestDaoImpl;
+
+
+
+
+public class MainApp {
+
+	private static ApplicationContext context;
+
+	public static void main(String[] args) {
+		context = new ClassPathXmlApplicationContext("com/firstspringapp/bean/Beans.xml");
+
+//		Helloworld obj = (Helloworld) context.getBean("helloworld");
+//		
+//		Stage stage=(Stage)context.getBean("stage");
+//
+//		stage.printStage();
+//		
+//		obj.printMsg();
+		TestDao testDao= (TestDao)context.getBean("testDao");
+	
+
+	}
+
+}

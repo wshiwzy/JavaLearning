@@ -1,0 +1,24 @@
+package com.zywu.finaldata;
+
+class overridetest2 {
+
+	private void f() {
+		
+	}
+	
+	private final void  g() {
+		
+	}
+}
+
+
+public class overridetest extends overridetest2{
+	
+	private void f() {
+		
+	}
+	private final void  g() {
+		
+	}
+}
+

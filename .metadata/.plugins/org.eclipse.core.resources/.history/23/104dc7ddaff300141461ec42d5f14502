@@ -1,0 +1,42 @@
+package com.zywu.finaldata;
+
+class overridetest2 {
+
+	private void f() {
+		
+	}
+	
+	private final void  g() {
+		
+	}
+}
+class overridetest3 extends overridetest2{
+	
+	void f() {
+		
+	}
+	final void  g() {
+		
+	}
+}
+
+public class overridetest extends overridetest3{
+	@Override
+	public void f() {
+		
+	}
+
+	public final void  g() {
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		overridetest tOverridetest=new overridetest();
+		tOverridetest.f();
+		
+		overridetest3 tOverridetest3=tOverridetest;
+		tOverridetest3.f();
+	}
+}
+

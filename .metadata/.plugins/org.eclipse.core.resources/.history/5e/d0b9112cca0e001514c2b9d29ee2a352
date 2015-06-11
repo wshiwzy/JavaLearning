@@ -1,0 +1,46 @@
+package com.firstspringapp.bean;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
+import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
+
+
+
+
+public class MainApp {
+
+	private static ApplicationContext context;
+
+	public static void main(String[] args) {
+		context = new ClassPathXmlApplicationContext("com/firstspringapp/bean/Beans.xml");
+
+//		Helloworld obj = (Helloworld) context.getBean("helloworld");
+//		
+//		Stage stage=(Stage)context.getBean("stage");
+//
+//		stage.printStage();
+//		
+//		obj.printMsg();
+		@SuppressWarnings("deprecation")
+		SimpleJdbcTemplate obj = (SimpleJdbcTemplate) context.getBean("jdbcTemplate");
+		obj.queryForObject("select * from ttt;", new ParameterizedRowMapper<Ttt>(){
+
+			@Override
+			public Ttt mapRow(ResultSet rs, int rowNum) throws SQLException {
+			Ttt ttt=new Ttt();
+			ttt.setA(rs.getInt(1));
+			ttt.setB(rs.getString(2));
+			return ttt;
+				return null;
+			}
+			
+		}, 1)
+	
+
+	}
+
+}

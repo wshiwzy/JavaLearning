@@ -1,0 +1,66 @@
+package com.firstspringapp.dao;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.firstspringapp.bean.DataBean;
+
+
+public class TestDaoImpl  implements TestDao {
+	@Autowired
+	private JdbcTemplate jdbc;
+	@Override
+	public DataBean getDataBeanById(int id) {
+//		return jdbc.queryForObject("select * from ttt where a=?", new ParameterizedRowMapper<DataBean>() {
+//
+//			@Override
+//			public DataBean mapRow(ResultSet rs, int rowNum) throws SQLException {
+//				
+//				DataBean dBean=new DataBean();
+//				dBean.setA(rs.getInt(1));
+//				dBean.setB(rs.getString(2));
+//				return dBean;
+//			}
+//		}, id);
+		
+		List<Map<String,Object>> rows = jdbc.queryForList("select * from ttt where a=?", id);
+		List<DataBean> beanList=new ArrayList<DataBean>();
+		for(Map<String, Object> map:rows)
+		{
+			DataBean dBean=new DataBean();
+			dBean.setA((Integer)map.get("a"));
+			dBean.setB((String)map.get("b"));
+			beanList.add(dBean);
+		}
+		if(beanList.size()>0)
+			return beanList.get(0);
+		else {
+			return null;
+		}
+	}
+
+	@Override
+	public void addDataBean(DataBean bean) {
+		jdbc.update("insert into ttt values(?,?)", bean.getA(),bean.getB());
+	}
+
+	@Override
+	public void UpdateBean(DataBean bean) {
+		jdbc.update("insert into ttt values(?,?)", bean.getA(),bean.getB());
+		
+	}
+
+	@Override
+	public Void DeleteBean(DataBean bean) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

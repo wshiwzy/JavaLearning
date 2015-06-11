@@ -1,0 +1,17 @@
+package com.zywu.javastrings;
+
+public class TostringTest {
+
+	@Override
+	public String toString() {
+		return "TostringTest address" + super.toString() + "\n";
+		return null;
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

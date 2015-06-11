@@ -1,0 +1,7 @@
+package com.firstspringapp.dao;
+
+import com.firstspringapp.bean.DataBean;
+
+public interface TestDao  {
+	DataBean getDataBeanById(String id);
+}

@@ -1,0 +1,24 @@
+package com.firstspringapp.bean;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+
+public class MainApp {
+
+	private static ApplicationContext context;
+
+	public static void main(String[] args) {
+		context = new ClassPathXmlApplicationContext("com/firstspringapp/bean/Beans.xml");
+
+		Helloworld obj = (Helloworld) context.getBean("helloWorld");
+		
+		Stage stage=(Stage)context.getBean("stage");
+
+		stage.printStage();
+		obj.printMsg();
+
+	}
+
+}

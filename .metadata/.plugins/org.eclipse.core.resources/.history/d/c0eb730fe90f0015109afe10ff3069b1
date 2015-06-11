@@ -1,0 +1,23 @@
+package com.firstspringapp.dao;
+
+import org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport;
+
+import com.firstspringapp.bean.DataBean;
+
+
+@SuppressWarnings("deprecation")
+public class TestDaoImpl  implements TestDao {
+
+	@Override
+	public DataBean getDataBeanById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addDataBean(DataBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

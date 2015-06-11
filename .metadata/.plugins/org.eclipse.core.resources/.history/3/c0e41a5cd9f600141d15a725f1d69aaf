@@ -1,0 +1,19 @@
+package com.zywu.javastrings;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class TostringTest {
+
+	@Override
+	public String toString() {
+		return "TostringTest address" + super.toString() + "\n";		
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<ToStringTest> vList=new ArrayList<TostringTest>();
+	}
+
+}

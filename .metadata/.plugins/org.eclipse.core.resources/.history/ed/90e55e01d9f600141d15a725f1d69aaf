@@ -1,0 +1,10 @@
+package com.zywu.javastrings;
+
+public class TostringTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
