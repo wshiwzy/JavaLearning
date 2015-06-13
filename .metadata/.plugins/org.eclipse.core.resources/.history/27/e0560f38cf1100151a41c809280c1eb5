@@ -1,0 +1,18 @@
+package com.John.spring.mvc;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+
+@Controller
+public class HomeController {
+	
+	public ModelAndView Index()
+	{
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("employeeName", "zywu");
+		mav.addObject("age", 10);
+		return mav;
+	}
+	
+}

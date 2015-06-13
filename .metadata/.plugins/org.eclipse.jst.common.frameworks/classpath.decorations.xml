@@ -1,0 +1,10 @@
+<classpath>
+  <container id="FirstSpringMvcApp!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/eclipse/workspace/FirstSpringMvcApp/WebContent/WEB-INF/lib/spring-webmvc-4.0.0.RELEASE.jar">
+      <source-attachment-path>E:/eclipse/workspace/FirstSpringMvcApp/WebContent/WEB-INF/lib/spring-webmvc-4.0.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+    <entry id="E:/eclipse/workspace/FirstSpringMvcApp/WebContent/WEB-INF/lib/spring-context-4.0.0.RELEASE.jar">
+      <source-attachment-path>E:/eclipse/workspace/FirstSpringMvcApp/WebContent/WEB-INF/lib/spring-context-4.0.0.RELEASE-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>
