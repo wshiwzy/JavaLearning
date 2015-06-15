@@ -1,0 +1,9 @@
+package com.John.spring.dao;
+
+import com.John.spring.model.Employee;
+
+public interface EmployeeDao {
+	Employee findEmployeebyId();
+	
+	
+}

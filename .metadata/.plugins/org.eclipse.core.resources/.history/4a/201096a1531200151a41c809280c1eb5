@@ -1,0 +1,5 @@
+package com.John.spring.dao;
+
+public class SqlStatement {
+
+}

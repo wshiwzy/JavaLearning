@@ -1,0 +1,15 @@
+1434252892510	Delete element
+1434253796618	Delete element
+1434257261476	Rename resource 'views.xml'
+1434257766709	Move 'database.properties' to 'properties'
+1434257998646	Rename resource 'DataSource.xml'
+1434258018334	Copy file
+1434258022551	Copy file
+1434258045012	Rename resource 'Copy (2) of DataSource-context.xml'
+1434258058933	Rename resource 'Copy of DataSource-context.xml'
+1434258065257	Rename resource 'DataSource-context.xml'
+1434258694238	Extract constant 'GETEMPLOYEEBYID2'
+1434265270316	Rename resource 'dataSource-context.xml'
+1434265284150	Rename resource 'datasource-context.xml'
+1434265292188	Rename resource 'persistence-context.xml'
+1434265297877	Rename resource 'service-context.xml'

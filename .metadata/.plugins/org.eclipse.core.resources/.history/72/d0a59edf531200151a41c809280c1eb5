@@ -1,0 +1,6 @@
+package com.John.spring.dao;
+
+public class SqlStatement {
+	static final String getEmployeeById="";
+	private static final String GETEMPLOYEEBYID2 = getEmployeeById;
+}

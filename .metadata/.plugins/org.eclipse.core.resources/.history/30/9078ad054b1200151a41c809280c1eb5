@@ -1,0 +1,16 @@
+package com.John.spring.model;
+
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+
+	private long employeeId;
+	
+	private String name;
+	
+	private Integer age;
+	
+	private boolean isEnable;
+	
+	
+}

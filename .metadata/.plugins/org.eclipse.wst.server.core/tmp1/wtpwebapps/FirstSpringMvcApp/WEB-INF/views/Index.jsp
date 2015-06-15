@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	name:${employeeName}
-	age:${age}
+employeename:${employeeName}<br>
+age:${age}<br>
+address:${address }<br>
+tel:${tel }<br>
+isenable:${isenable}<br>
 </body>
 </html>
