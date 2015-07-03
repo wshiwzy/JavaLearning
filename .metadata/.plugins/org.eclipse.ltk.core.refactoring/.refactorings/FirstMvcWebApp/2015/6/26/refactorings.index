@@ -1,0 +1,15 @@
+1435287002421	Delete element
+1435289405968	Delete element
+1435290256133	Rename resource 'FirstMvcWebApp.xml'
+1435296064129	Rename type 'employee'
+1435300998230	Delete element
+1435302011915	Move 'Employee.java' to 'pojo'
+1435308462640	Delete element
+1435310133355	Move 'mapper' to 'dao'
+1435310715237	Encapsulate field 'employeeDao'
+1435311102590	Move 'jdbc.properties' to 'WEB-INF'
+1435311105218	Move 'spring-mybatis.xml' to 'WEB-INF'
+1435311670610	Move 'jdbc.properties' to 'resources'
+1435314040090	Copy file
+1435314049799	Rename resource 'Copy of index.ftl'
+1435325352154	Rename resource 'addEmployee.flt'

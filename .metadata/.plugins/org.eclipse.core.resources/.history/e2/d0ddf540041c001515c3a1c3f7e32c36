@@ -1,0 +1,62 @@
+package com.zywu.mvn.mvc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.zywu.mvn.pojo.Employee;
+import com.zywu.mvn.service.EmployeeService;
+
+@Controller
+public class HomeController {
+
+	
+		@Autowired
+		EmployeeService employeeService;
+
+		@RequestMapping("/emp/{id}")
+		public ModelAndView Index(@PathVariable String id) {
+			
+			ModelAndView mav = new ModelAndView("index2");
+			
+			Employee employee = employeeService.findEmployeeById(Long.parseLong(id));
+						
+			mav.addObject("employeeName", employee.getName());
+			mav.addObject("age", employee.getAge());
+			mav.addObject("enable", employee.isEnable());
+			mav.addObject("address", employee.getAddress());
+			mav.addObject("tel", employee.getTel());
+			return mav;
+			
+	}
+		
+		
+		@RequestMapping(value="/add")
+		public ModelAndView Add() {
+			ModelAndView mav = new ModelAndView("redirect:/emps");
+			
+			employeeService.addEmployee(new Employee("test",12,false,"anhui","1234567890"));
+			
+			return mav;
+			
+	}
+		
+		@RequestMapping("/emps")
+		public ModelAndView All() {
+
+			ModelAndView mav = new ModelAndView("index");
+			
+			List<Employee> employees = employeeService.getAllEmployees();
+			
+			mav.addObject("employees", employees);
+			return mav;		
+			
+	}
+}

@@ -1,0 +1,7 @@
+package com.zywu.mvn.service.impl;
+
+import com.zywu.mvn.service.EmployeeService;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+}

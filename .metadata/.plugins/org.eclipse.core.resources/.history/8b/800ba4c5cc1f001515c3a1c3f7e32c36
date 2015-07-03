@@ -1,0 +1,9 @@
+package com.zywu.mvn.service;
+
+import com.zywu.mvn.pojo.Employee;
+
+public class EmployeeServiceTest {
+	Employee findEmployeeByIdTest(long empId) {
+		return null;
+	}
+}

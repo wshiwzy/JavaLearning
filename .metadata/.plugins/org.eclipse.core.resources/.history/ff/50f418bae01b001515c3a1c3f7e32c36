@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.zywu.mvn.dao.EmployeeDao">
+    
+    <select id="getAllEmployees" resultType="com.zywu.mvn.pojo.Employee">    <!-- 查询表中的所有用户 -->
+        select * from employee
+    </select>
+    
+    <insert id="addEmployee" parameterType="com.zywu.mvn.pojo.Employee">    <!-- 向数据库中插入用户 -->
+        insert into tb_user(username,password,email,sex,age) values(#{username},#{password},#{email},#{sex},#{age})
+        INSERT INTO EMPLOYEE(name,age,isenable,address,tel) VALUES(?,?,?,?,?,?)
+    </insert>
+    
+    <update id="updateEmployee" parameterType="com.zywu.mvn.pojo.Employee">     <!-- 更新库中的用户 -->
+        update tb_user set username=#{username},password=#{password},email=#{email},sex=#{sex},age=#{age} where username=#{username}
+    </update>
+    
+    <delete id="deleteEmployee" parameterType="Long">    <!-- 删除用户 -->
+        delete from tb_user where username=#{username}
+    </delete>
+    
+    <select id="findEmployeeById" parameterType="Long" resultType="com.zywu.mvn.pojo.Employee"> <!-- 根据用户名查找用户 -->
+        select * from employee where employeeid=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,32 @@
+package com.zywu.mvn.service;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.springframework.stereotype.Service;
+
+import com.zywu.mvn.dao.EmployeeDao;
+import com.zywu.mvn.pojo.Employee;
+
+@Service
+public class EmployeeServiceTest {
+
+	EmployeeDao employeeDao;
+
+	public EmployeeDao getEmployeeDao() {
+		return employeeDao;
+	}
+
+	public void setEmployeeDao(EmployeeDao employeeDao) {
+		this.employeeDao = employeeDao;
+	}
+
+	@Test
+	public void findEmployeeByIdTest() {
+		assertNotNull(employeeDao);
+		Employee employee = employeeDao.findEmployeeById(1);
+		assertNotNull(employee);
+		
+
+	}
+}

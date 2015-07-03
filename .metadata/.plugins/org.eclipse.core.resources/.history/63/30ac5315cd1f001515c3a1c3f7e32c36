@@ -1,0 +1,24 @@
+package com.zywu.mvn.service;
+
+import org.junit.Test;
+
+import com.zywu.mvn.dao.EmployeeDao;
+import com.zywu.mvn.pojo.Employee;
+
+public class EmployeeServiceTest {
+	
+	EmployeeDao employeeDao;
+	
+	public EmployeeDao getEmployeeDao() {
+		return employeeDao;
+	}
+
+	public void setEmployeeDao(EmployeeDao employeeDao) {
+		this.employeeDao = employeeDao;
+	}
+
+	@Test
+	Employee findEmployeeByIdTest(long empId) {
+		return null;
+	}
+}

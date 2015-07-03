@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.zywu.mvn.dao.EmployeeDao">
+    
+    <select id="getAllEmployees" resultMap="Employee">    <!-- 查询表中的所有用户 -->
+        select * from employee
+    </select>
+    
+    
+    <sql id="employeeColumn">
+    ${alias}.employeeid,
+    ${alias}.name,
+    ${alias}.age,
+    ${alias}.isenable,
+    ${alias}.address,
+    ${alias}.tel</sql>
+    <insert id="addEmployee" parameterType="com.zywu.mvn.pojo.Employee">    <!-- 向数据库中插入用户 -->        
+        INSERT INTO EMPLOYEE(name,age,isenable,address,tel) VALUES(#{name},#{age},#{enable},#{address},#{tel})
+    </insert>
+    
+    <update id="updateEmployee" parameterType="com.zywu.mvn.pojo.Employee">     <!-- 更新库中的用户 -->        
+        update employee set name=#{name},age=#{age},isenable=#{enable},address=#{address},tel=#{tel} where employeeid=#{employeeId}
+    </update>
+    
+    <delete id="deleteEmployee" parameterType="java.lang.Long">    <!-- 删除用户 -->
+        delete from employee where employeeid=#{employeeId}
+    </delete>
+    
+   <!--  <select id="findEmployeeById" parameterType="java.lang.Long" resultType="com.zywu.mvn.pojo.Employee"> 根据用户名查找用户
+        select * from employee where employeeid=#{employeeId}
+    </select> -->
+    
+    <select id="findEmployeeById" parameterType="java.lang.Long" resultMap="Employee"> <!-- 根据用户名查找用户 -->
+        select * from employee where employeeid=#{employeeId}
+    </select>
+    
+    <resultMap type="com.zywu.mvn.pojo.Employee" id="Employee">
+    	<id property="employeeId" column="employeeid"/>
+    	<result property="employeeId" column="employeeid"/>
+    	<result property="name" column="name"/>
+    	<result property="age" column="age"/>
+    	<result property="enable" column="isenable"/>
+    	<result property="address" column="address"/>
+    	<result property="tel" column="tel"/>
+    </resultMap>
+    
+</mapper>

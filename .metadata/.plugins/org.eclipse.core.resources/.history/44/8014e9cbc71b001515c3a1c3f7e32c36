@@ -1,0 +1,21 @@
+<html>
+<head><title>FreeMarker Spring MVC Hello World</title>
+<body>
+	<div id="header">
+	<H2>
+	    FreeMarker Spring MVC Hello World
+	</H2>
+	</div>
+	employeeName:${employeeName}
+	<ul>
+	 	<#list employees as employee>
+	 		<li>-name:${employee.name?upper_case}</li>
+	 		<li>-age:${employee.age}</li>
+	 		<li>-test:${employee.dfdf!"unkown"}</li>
+	 		<li>-address:${employee.address}</li>
+	 		<li>-tel:${employee.tel}</li>
+	 		<p></P> 				
+	 	</#list>
+ 	</ul>
+</html>
+	

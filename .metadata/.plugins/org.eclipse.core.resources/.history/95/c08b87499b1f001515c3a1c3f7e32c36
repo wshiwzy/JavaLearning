@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+<title>Registration Page</title>
+
+</head>
+
+<body>
+
+ 
+
+<form method="POST" action="/add" >
+
+<table>
+
+<tr>
+
+<td>User Name :</td>
+
+<td><input type="text" name="name" /></td>
+
+</tr>
+
+<td>enable :</td>
+
+<td>
+
+ÄÐ£º<input type="checkbox" name="gender" value="M"  /><br/>
+
+Å®£º<input type="radio" name="gender" value="F"  />
+
+</td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+</html>

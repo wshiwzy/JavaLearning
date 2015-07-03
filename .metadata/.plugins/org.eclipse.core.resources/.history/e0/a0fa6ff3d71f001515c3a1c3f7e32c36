@@ -1,0 +1,36 @@
+package com.zywu.mvn.service;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.zywu.mvn.dao.EmployeeDao;
+import com.zywu.mvn.pojo.Employee;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"classpath:/FirstMvcWebApp-servlet.xml"})
+public class EmployeeServiceTest extends AbstractJUnit4SpringContextTests {
+
+	EmployeeDao employeeDao;
+
+	public EmployeeDao getEmployeeDao() {
+		return employeeDao;
+	}
+
+	public void setEmployeeDao(EmployeeDao employeeDao) {
+		this.employeeDao = employeeDao;
+	}
+
+	@Test
+	public void findEmployeeByIdTest() {
+		assertNotNull(employeeDao);
+		Employee employee = employeeDao.findEmployeeById(1);
+		assertNotNull(employee);
+		
+
+	}
+}

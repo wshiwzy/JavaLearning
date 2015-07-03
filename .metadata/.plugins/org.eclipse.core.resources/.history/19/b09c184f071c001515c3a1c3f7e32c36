@@ -1,0 +1,109 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+02.
+<html>
+03.
+<head>
+04.
+<title>Registration Page</title>
+05.
+</head>
+06.
+<body>
+07.
+ 
+08.
+<form:form method="POST" commandName="user">
+09.
+<table>
+10.
+<tr>
+11.
+<td>User Name :</td>
+12.
+<td><form:input path="name" /></td>
+13.
+</tr>
+14.
+<tr>
+15.
+<td>Password :</td>
+16.
+<td><form:password path="password" /></td>
+17.
+</tr>
+18.
+<tr>
+19.
+<td>Gender :</td>
+20.
+<td>
+21.
+<form:radiobutton path="gender" value="M" label="M" />
+22.
+<form:radiobutton path="gender" value="F" label="F" />
+23.
+</td>
+24.
+</tr>
+25.
+<tr>
+26.
+<td>Country :</td>
+27.
+<td>
+28.
+<form:select path="country">
+29.
+<form:option value="0" label="Select" />
+30.
+<form:options items="${countryList}" itemValue="countryId" itemLabel="countryName" />
+31.
+</form:select>
+32.
+</td>
+33.
+</tr>
+34.
+<tr>
+35.
+<td>About you :</td>
+36.
+<td><form:textarea path="aboutYou" /></td>
+37.
+</tr>
+38.
+<tr>
+39.
+<td>Community :</td>
+40.
+<td><form:checkboxes path="communityList" items="${communityList}" itemValue="key" itemLabel="value" /></td>
+41.
+</tr>
+42.
+<tr>
+43.
+<td></td>
+44.
+<td>
+45.
+<form:checkbox path="mailingList" label="Would you like to join our mailinglist?" />
+46.
+</td>
+47.
+</tr>
+48.
+<tr>
+49.
+<td colspan="2"><input type="submit" value="Register"></td>
+50.
+</tr>
+51.
+</table>
+52.
+</form:form>
+53.
+ 
+54.
+</body>
+55.
+</html>

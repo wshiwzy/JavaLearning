@@ -1,0 +1,17 @@
+package com.zywu.mvn.service;
+
+import com.zywu.mvn.mvc.Employee;
+
+public interface EmployeeService {
+
+	Employee findEmployeeById(long empId);
+
+	void addEmployee(Employee emp);
+
+	void deleteEmployee(long empId);
+
+	void updateEmployee(Employee emp);
+
+	List<Employee> getAllEmployees();
+
+}

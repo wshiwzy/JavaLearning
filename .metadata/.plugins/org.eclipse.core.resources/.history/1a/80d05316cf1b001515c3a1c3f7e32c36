@@ -1,0 +1,5 @@
+package com.zywu.mvn.service;
+
+public interface EmployeeService {
+
+}

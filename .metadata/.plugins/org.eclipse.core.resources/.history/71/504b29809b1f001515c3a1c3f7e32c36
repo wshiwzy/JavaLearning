@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+<title>Registration Page</title>
+
+</head>
+
+<body>
+
+ 
+
+<form method="POST" action="/add" >
+
+<table>
+
+<tr>
+
+<td>User Name :</td>
+
+<td><input type="text" name="name" /></td>
+
+</tr>
+
+<td>enable :</td>
+
+<td>
+
+<input type="checkbox" name="gender"  /><br/>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>address :</td>
+
+<td><input type="text" name="address" /></td>
+
+</tr>
+<tr>
+
+<td>telphone :</td>
+
+<td><input type="text" name="telphone" /></td>
+
+</tr>
+<tr>
+
+<td>User Name :</td>
+
+<td><input type="age" name="age" /></td>
+
+</tr>
+<tr>
+
+<td>User Name :</td>
+
+<td><input type="text" name="name" /></td>
+
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+</html>

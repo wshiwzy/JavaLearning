@@ -1,0 +1,13 @@
+package com.zywu.mvn.service;
+
+import com.zywu.mvn.dao.EmployeeDao;
+import com.zywu.mvn.pojo.Employee;
+
+public class EmployeeServiceTest {
+	
+	EmployeeDao employeeDao;
+	
+	Employee findEmployeeByIdTest(long empId) {
+		return null;
+	}
+}
