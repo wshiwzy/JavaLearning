@@ -6,19 +6,24 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="gener" key="selection"/>
+		<item value="enable" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
-		<item value="true" key="wrap"/>
+		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="enable"/>
+			<item value="mysql-connector-java"/>
+			<item value="com.zywu.mvn.mvc.Employee"/>
+			<item value="isEnable"/>
 			<item value="gener"/>
 			<item value="gen"/>
 			<item value="ge"/>
 			<item value="mapping"/>
-			<item value="map"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="com.zywu.mvn.pojo.Employee"/>
 		</list>
 	</section>
 	<section name="org.eclipse.wst.xml.ui.internal.preferences.XMLTemplatePreferencePage$XMLEditTemplateDialog_dialogBounds">

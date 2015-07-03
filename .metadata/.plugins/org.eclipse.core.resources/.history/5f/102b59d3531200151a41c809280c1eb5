@@ -1,5 +1,0 @@
-package com.John.spring.dao;
-
-public class SqlStatement {
-	static final String getEmployeeById="";
-}

@@ -1,5 +1,0 @@
-package com.John.spring.service;
-
-public interface EmployeeService {
-	
-}
